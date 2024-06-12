@@ -8,7 +8,8 @@ pipeline {
                 url: 'https://github.com/yourusername/repo-1.git'
             }
         }
-        // Add your build and test stages here
+        // This is where I would add my test and dev branches but idk how to do that so imma leave it
+
     }
 }
 
