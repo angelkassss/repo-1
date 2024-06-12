@@ -1,15 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Checkout') {
             steps {
-                echo 'Building the code'
+                git branch: 'dev', // Change to 'master' for the master branch pipeline
+                credentialsId: 'your-github-credentials-id', // Replace with your credentials ID (optional)
+                url: 'https://github.com/yourusername/repo-1.git'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Running the test for the code'
-            }
-        }
+        // Add your build and test stages here
     }
 }
+
